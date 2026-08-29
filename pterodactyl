@@ -61,6 +61,24 @@ read -p "Press Enter to continue..."
 ;;
 
 2)
+echo -e "${CYAN}Installing NON-KVM dependencies...${RESET}"
+
+if command -v apt >/dev/null 2>&1; then
+    apt update
+    apt install -y qemu-system-x86 cloud-image-utils qemu-utils wget curl
+elif command -v dnf >/dev/null 2>&1; then
+    dnf install -y qemu-img qemu-system-x86-core cloud-utils-growpart wget curl
+elif command -v yum >/dev/null 2>&1; then
+    yum install -y qemu-img wget curl
+else
+    echo -e "${RED}Unsupported package manager.${RESET}"
+    read -p "Press Enter to continue..."
+    continue
+fi
+
+echo -e "${GREEN}Dependencies installed! Starting NON-KVM installer...${RESET}"
+sleep 2
+
 bash <(curl -fsSL https://raw.githubusercontent.com/freediamodns/FreeVps/refs/heads/main/ifuusethiscodewithoutcredituragay)
 ;;
 
