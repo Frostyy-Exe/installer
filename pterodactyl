@@ -10,12 +10,12 @@ while true; do
  |_| |_|_\|___/\___/ |_|   |_|    |_|   |___|_|\_|___/ |_/_/ \_\____|____|___|_|_\ 
 BANNER
 
-    echo ""
-    echo "1) VPS"
-    echo "2) PANEL"
-    echo "3) TOOLBOX"
-    echo "4) EXIT"
-    echo ""
+      echo ""
+      echo "1) VPS"
+      echo "2) PANEL"
+      echo "3) TOOLBOX"
+      echo "4) EXIT"
+      echo ""
 
     read -p "Select: " main
 
