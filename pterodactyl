@@ -1026,7 +1026,8 @@ exit 0
 ;;
 
 *)
-echo -e "${RED}Invalid option${RESET}"
-sleep 2
-;;
+    echo -e "${RED}Invalid option${RESET}"
+    sleep 2
+    ;;
 esac
+done
