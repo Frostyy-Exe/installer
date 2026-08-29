@@ -4,14 +4,15 @@ while true; do
     clear
 
     echo "============================================================================================================================================"
-    echo "   ______  _____    ____    _____  _______ __     ____     __       _____  _   _   _____  _______   ___      _       _       ______  _____  
-            |  ____||  __ \  / __ \  / ____||__   __|\ \   / /\ \   / /      |_   _|| \ | | / ____||__   __| /   \    | |     | |     |  ____||  __ \ 
-            | |__   | |__) || |  | || (___     | |    \ \_/ /  \ \_/ /         | |  |  \| || (___     | |   /  ^  \   | |     | |     | |__   | |__) |
-            |  __|  |  _  / | |  | | \___ \    | |     \   /    \   /          | |  | . ` | \___ \    | |  /  /_\  \  | |     | |     |  __|  |  _  / 
-            | |     | | \ \ | |__| | ____) |   | |      | |      | |          _| |_ | |\  | ____) |   | | /  _____  \ | |____ | |____ | |____ | | \ \ 
-            |_|     |_|  \_\ \____/ |_____/    |_|      |_|      |_|         |_____||_| \_||_____/    |_|/__/     \__\|______||______||______||_|  \_\"
-    echo "==============================================================================================================================================="
+    echo "   ______  _____    ____    _____  _______ __     ____     __       _____  _   _   _____  _______   ___      _       _       ______  _____"
+    echo "  |  ____||  __ \  / __ \  / ____||__   __|\ \   / /\ \   / /      |_   _|| \ | | / ____||__   __| /   \    | |     | |     |  ____||  __ \ "
+    echo "  | |__   | |__) || |  | || (___     | |    \ \_/ /  \ \_/ /         | |  |  \| || (___     | |   /  ^  \   | |     | |     | |__   | |__) |"
+    echo "  |  __|  |  _  / | |  | | \___ \    | |     \   /    \   /          | |  | . | \___ \    | |  /  /_\  \  | |     | |     |  __|  |  _  /"
+    echo "  | |     | | \ \ | |__| | ____) |   | |      | |      | |          _| |_ | |\  | ____) |   | | /  _____  \ | |____ | |____ | |____ | | \ \ "
+    echo "  |_|     |_|  \_\ \____/ |_____/    |_|      |_|      |_|         |_____||_| \_||_____/    |_|/__/     \__\|______||______||______||_|  \_\"
+    echo "============================================================================================================================================"
     echo ""
+
     echo "1) VPS"
     echo "2) PANEL"
     echo "3) TOOLBOX"
@@ -35,7 +36,8 @@ while true; do
 
             case "$vps" in
                 1)
-                    # Your KVM command
+                    echo "KVM installer not added yet."
+                    read -p "Press Enter to continue..."
                     ;;
                 2)
                     bash <(curl -fsSL https://raw.githubusercontent.com/freediamodns/FreeVps/refs/heads/main/ifuusethiscodewithoutcredituragay)
@@ -63,10 +65,11 @@ while true; do
 
             case "$panel" in
                 1)
-                    # Your Pterodactyl command
+                    echo "Pterodactyl installer not added yet."
+                    read -p "Press Enter to continue..."
                     ;;
                 2)
-                    bash <(curl -s https://raw.githubusercontent.com/JishnuTheGamer/Jtg/refs/heads/main/install.sh)
+                    bash <(curl -fsSL https://raw.githubusercontent.com/JishnuTheGamer/Jtg/refs/heads/main/install.sh)
                     ;;
                 0)
                     continue
@@ -82,11 +85,13 @@ while true; do
             clear
             echo "=========== TOOLBOX ==============="
             echo ""
-            # Your toolbox menu/command here
+            echo "Toolbox coming soon."
+            echo ""
             read -p "Press Enter to continue..."
             ;;
 
         4)
+            clear
             exit 0
             ;;
 
