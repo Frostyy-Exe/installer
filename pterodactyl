@@ -57,6 +57,35 @@ read -p "Select: " vps
 
 case "$vps" in
 1)
+ echo -e "${CYAN}Installing KVM/QEMU dependencies...${RESET}"
+
+if command -v apt >/dev/null 2>&1; then
+    apt update
+    apt install -y qemu-system-x86 qemu-utils cloud-image-utils wget curl openssl
+elif command -v dnf >/dev/null 2>&1; then
+    dnf install -y qemu-system-x86 qemu-img cloud-utils-growpart wget curl openssl
+elif command -v yum >/dev/null 2>&1; then
+    yum install -y qemu-system-x86 qemu-img wget curl openssl
+else
+    echo -e "${RED}Unsupported package manager.${RESET}"
+    read -p "Press Enter to continue..."
+    continue
+fi
+
+# Verify required commands
+if command -v qemu-system-x86_64 >/dev/null 2>&1 &&
+   command -v qemu-img >/dev/null 2>&1; then
+
+    echo -e "${GREEN}QEMU/KVM dependencies installed successfully!${RESET}"
+    sleep 2
+
+    # Start your KVM manager here
+    # main_menu
+
+else
+    echo -e "${RED}QEMU installation failed or required commands are missing.${RESET}"
+fi
+
 #!/bin/bash
 set -euo pipefail
 
