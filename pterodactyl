@@ -1,0 +1,98 @@
+#!/bin/bash
+
+while true; do
+    clear
+
+    echo "============================================================================================================================================"
+    echo "   ______  _____    ____    _____  _______ __     ____     __       _____  _   _   _____  _______   ___      _       _       ______  _____  
+            |  ____||  __ \  / __ \  / ____||__   __|\ \   / /\ \   / /      |_   _|| \ | | / ____||__   __| /   \    | |     | |     |  ____||  __ \ 
+            | |__   | |__) || |  | || (___     | |    \ \_/ /  \ \_/ /         | |  |  \| || (___     | |   /  ^  \   | |     | |     | |__   | |__) |
+            |  __|  |  _  / | |  | | \___ \    | |     \   /    \   /          | |  | . ` | \___ \    | |  /  /_\  \  | |     | |     |  __|  |  _  / 
+            | |     | | \ \ | |__| | ____) |   | |      | |      | |          _| |_ | |\  | ____) |   | | /  _____  \ | |____ | |____ | |____ | | \ \ 
+            |_|     |_|  \_\ \____/ |_____/    |_|      |_|      |_|         |_____||_| \_||_____/    |_|/__/     \__\|______||______||______||_|  \_\"
+    echo "==============================================================================================================================================="
+    echo ""
+    echo "1) VPS"
+    echo "2) PANEL"
+    echo "3) TOOLBOX"
+    echo "4) EXIT"
+    echo ""
+
+    read -p "Select: " main
+
+    case "$main" in
+
+        1)
+            clear
+            echo "========== VPS INSTALLER =========="
+            echo ""
+            echo "1) KVM"
+            echo "2) NON-KVM"
+            echo "3) BACK"
+            echo ""
+
+            read -p "Select: " vps
+
+            case "$vps" in
+                1)
+                    # Your KVM command
+                    ;;
+                2)
+                    bash <(curl -fsSL https://raw.githubusercontent.com/freediamodns/FreeVps/refs/heads/main/ifuusethiscodewithoutcredituragay)
+                    ;;
+                3)
+                    continue
+                    ;;
+                *)
+                    echo "Invalid option"
+                    sleep 2
+                    ;;
+            esac
+            ;;
+
+        2)
+            clear
+            echo "========= PANEL INSTALLER ========="
+            echo ""
+            echo "1) PTERODACTYL"
+            echo "2) JTG PANEL"
+            echo "0) BACK"
+            echo ""
+
+            read -p "Select: " panel
+
+            case "$panel" in
+                1)
+                    # Your Pterodactyl command
+                    ;;
+                2)
+                    bash <(curl -s https://raw.githubusercontent.com/JishnuTheGamer/Jtg/refs/heads/main/install.sh)
+                    ;;
+                0)
+                    continue
+                    ;;
+                *)
+                    echo "Invalid option"
+                    sleep 2
+                    ;;
+            esac
+            ;;
+
+        3)
+            clear
+            echo "=========== TOOLBOX ==============="
+            echo ""
+            # Your toolbox menu/command here
+            read -p "Press Enter to continue..."
+            ;;
+
+        4)
+            exit 0
+            ;;
+
+        *)
+            echo "Invalid option"
+            sleep 2
+            ;;
+    esac
+done
