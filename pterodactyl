@@ -1,4 +1,3 @@
-cat > pterodactyl <<'EOF'
 #!/bin/bash
 
 # COLORS
